@@ -2,15 +2,17 @@
 export default function calculate(num1, num2, symbol) {
     switch (symbol) {
         case '+':
-            return num1 + num2;
+            return parseInt(num1) + parseInt(num2);
         case '-':
-            return num1 - num2;
+            return parseInt(num1) - parseInt(num2);
         case '*':
-            return num1 * num2;
+            return parseInt(num1) * parseInt(num2);
         case '/':
-            return num2 !==0 ? num1 / num2 : "Division by zero is not allowed";
+            return parseInt(num2) !==0 ? parseInt(num1) / parseInt(num2) : "Division by zero is not allowed";
         case '%':
-            return "Invalid operator"
+            return "Invalid operator";
+        default:
+            return "Invalid operator";
     }
 }
 
